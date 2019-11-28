@@ -6,6 +6,15 @@
     <script src="js/main.js"></script>
 </head>
 <body ng-controller="ExpensesViewController">
-    {{name}}
+    <h1>{{title}}</h1>
+    <p>
+        Username : <b>{{userModel.name}}</b> <br/>
+        Old : {{userModel.old}}
+    </p>
+
+
+    <button ng-click="changeName()"> Change name to Tâm</button>
+    <button ng-click="increaseOld()"> Increase old</button>
+    <button ng-click="decreaseOld()"> Decrease old</button>
 </body>
-</html>
+</html> 
