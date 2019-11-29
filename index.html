@@ -1,25 +1,38 @@
 <html lang="en" ng-app="expensesApp">
+
 <head>
     <meta charset="UTF-8">
     <title>AngularJS Course</title>
     <script src="js/angular/angular.min.js"></script>
     <script src="js/main.js"></script>
 </head>
-<body ng-controller="ExpensesViewController">
-    <h1>{{title}}</h1>
-    <p>
-        Username : <b>{{userModel.name}}</b> <br/>
-        Old : {{userModel.old}}
-    </p>
+
+<body>
+    <div class="container-1" ng-controller="ExpensesViewController">
+        <h1>{{title}}</h1>
+        <p>
+            Username : <b>{{userModel.name}}</b> <br />
+            Old : {{userModel.old}}
+        </p>
 
 
-    <button ng-click="changeName()"> Change name to Tâm</button>
-    <button ng-click="increaseOld()"> Increase old</button>
-    <button ng-click="decreaseOld()"> Decrease old</button>
+        <button ng-click="changeName()"> Change name to Tâm</button>
+        <button ng-click="increaseOld()"> Increase old</button>
+        <button ng-click="decreaseOld()"> Decrease old</button>
 
-    <div style="margin-top: 10px;">
-        <input ng-model="userModel.name" type="text"/>
-        <input ng-model="userModel.old" type="number"/>
+        <div style="margin-top: 10px;">
+            <input ng-model="userModel.name" type="text" />
+            <input ng-model="userModel.old" type="number" />
+        </div>
     </div>
+
+    <div class="container-2" ng-controller="ListController">
+        <h1>{{title_list}}</h1>
+        <ul>
+            <li ng-repeat="item in items">{{item.name}}, desc : <span >{{item.desc}}</span></li>
+        </ul>
+    </div>
+
 </body>
-</html> 
+
+</html>

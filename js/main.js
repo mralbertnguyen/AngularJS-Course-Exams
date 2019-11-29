@@ -24,3 +24,33 @@ app.controller('ExpensesViewController',['$scope', function($scope){
         $scope.userModel.old--;
     }
 }])
+
+
+app.controller('ListController',['$scope',function($scope){
+
+    $scope.title_list = "List item";
+
+    $scope.items = [
+        {
+            name : "Item 1",
+            desc : "Desc 1"
+        },
+        {
+            name : "Item 2",
+            desc : "Desc 2"
+        },
+        {
+            name : "Item 3",
+            desc : "Desc 3"
+        },
+        {
+            name : "Item 4",
+            desc : "Desc 4"
+        },
+        {
+            name : "Item 5",
+            desc : "Desc 5"
+        }
+    ];
+
+}])
